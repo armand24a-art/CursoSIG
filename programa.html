@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa - SIG y GeoDa para Sociologos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand"><span class="logo-icon">🗺️</span>SIG + GeoDa</a>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="programa.html" class="active">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="proyecto-final.html">Proyecto Final</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section style="padding:140px 0 60px;background:var(--gradient-map);color:white;text-align:center;">
+    <div class="container">
+      <div class="hero-tag" style="display:inline-flex;margin-bottom:20px;background:rgba(0,180,216,0.15);border:1px solid rgba(0,180,216,0.25);padding:6px 16px;border-radius:30px;font-size:0.85rem;">
+        <span>📅</span> 1 semana | 40 horas | Modalidad presencial
+      </div>
+      <h1 style="font-family:var(--font-display);font-size:2.6rem;margin-bottom:16px;">Programa del Curso</h1>
+      <p style="opacity:0.88;font-size:1.05rem;max-width:600px;margin:0 auto;">
+        9 sesiones que van del pensamiento espacial basico al proyecto de investigacion integrado con QGIS y GeoDa
+      </p>
+    </div>
+  </section>
+
+  <section style="padding:40px 0 0;">
+    <div class="container">
+      <div class="info-box info-box-info fade-in">
+        <span class="box-icon">&#128161;</span>
+        <div><p><strong>Estructura:</strong> 15 horas de teoria + 25 horas de practica. Cada sesion combina fundamentos teoricos con ejercicios praticos en QGIS y GeoDa. No se requiere experiencia previa en SIG.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+      <h2 class="section-title fade-in">Calendario de Sesiones</h2>
+      <p class="section-subtitle fade-in">Detalles de cada sesion del curso</p>
+
+      <div class="program-table-wrap fade-in">
+        <table class="program-table">
+          <thead>
+            <tr>
+              <th>Sesion</th>
+              <th>Modulo</th>
+              <th>Nombre</th>
+              <th>Teoria</th>
+              <th>Practica</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="session-num" style="background:var(--accent-warm);">0</div></td>
+              <td>Modulo 0</td>
+              <td><strong>Bienvenida y Preparacion del Entorno</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Instalacion guiada de QGIS y GeoDa. Descarga de datos de practica.</span></td>
+              <td>2h</td>
+              <td>2h</td>
+              <td><span class="badge badge-presencial">Presencial</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">1</div></td>
+              <td>Modulo 1</td>
+              <td><strong>Pensando Espacialmente como Sociologo</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Fundamentos del razonamiento espacial y la geografia de los datos.</span></td>
+              <td>2h</td>
+              <td>2h</td>
+              <td><span class="badge badge-teoria">Teoria+Practica</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">2</div></td>
+              <td>Modulo 1</td>
+              <td><strong>Datos, Proyecciones y Mapas</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Sistemas de coordenadas, proyecciones, carga de shapefiles, join de datos, mapa coropletico.</span></td>
+              <td>1.5h</td>
+              <td>3.5h</td>
+              <td><span class="badge badge-practica">Practica intensiva</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">3</div></td>
+              <td>Modulo 2</td>
+              <td><strong>Primeros Pasos con GeoDa</strong><br><span style="color:var(--text-light);font-size:0.8rem;">AEDE, autocorrelacion espacial, interfaz GeoDa, histogramas vinculados.</span></td>
+              <td>2h</td>
+              <td>3h</td>
+              <td><span class="badge badge-teoria">Teoria+Practica</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">4</div></td>
+              <td>Modulo 2</td>
+              <td><strong>Cartografia Inteligente y Moran</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Mapas de categorias, matrices de pesos, Diagrama de Dispersión de Moran, clusters.</span></td>
+              <td>1.5h</td>
+              <td>3.5h</td>
+              <td><span class="badge badge-practica">Practica intensiva</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">5</div></td>
+              <td>Modulo 3</td>
+              <td><strong>Segregacion y Desigualdad</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Indice de Disimilitud, LISA Cluster, clusters de altos y bajos valores.</span></td>
+              <td>2h</td>
+              <td>3h</td>
+              <td><span class="badge badge-teoria">Teoria+Practica</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">6</div></td>
+              <td>Modulo 3</td>
+              <td><strong>Acceso y Disponibilidad de Servicios</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Geografia de la accesibilidad, buffers, analisis de equidad con datos socioeconomicos.</span></td>
+              <td>1.5h</td>
+              <td>3.5h</td>
+              <td><span class="badge badge-practica">Practica intensiva</span></td>
+            </tr>
+            <tr>
+              <td><div class="session-num">7</div></td>
+              <td>Modulo 4</td>
+              <td><strong>Integracion QGIS + GeoDa</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Flujo completo: limpieza, mapas, AEDE, LISA, mapa final de publicacion.</span></td>
+              <td>1h</td>
+              <td>4h</td>
+              <td><span class="badge badge-proyecto">Proyecto</span></td>
+            </tr>
+            <tr style="background:#f0f7f8;">
+              <td><div class="session-num" style="background:var(--accent);">&#9733;</div></td>
+              <td>Modulo 4</td>
+              <td><strong>Presentacion de Proyectos Finales</strong><br><span style="color:var(--text-light);font-size:0.8rem;">Mini-proyecto: pregunta de investigacion, mapa QGIS, resultados GeoDa, interpretacion sociologica.</span></td>
+              <td>1h</td>
+              <td>3h</td>
+              <td><span class="badge badge-proyecto">Evaluacion</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLE POR MODULO -->
+  <section class="section" style="background:linear-gradient(180deg,#e8f0f8 0%,var(--bg) 100%);">
+    <div class="container">
+      <h2 class="section-title fade-in">Detalle por Modulo</h2>
+      <p class="section-subtitle fade-in">Contenido teorico y pratico de cada modulo</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="mod0">Modulo 0</button>
+        <button class="tab-btn" data-tab="mod1">Modulo 1</button>
+        <button class="tab-btn" data-tab="mod2">Modulo 2</button>
+        <button class="tab-btn" data-tab="mod3">Modulo 3</button>
+        <button class="tab-btn" data-tab="mod4">Modulo 4</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-content active" id="mod0">
+          <div class="info-cards">
+            <div class="info-card"><h3>Bienvenida</h3><p>Presentacion del curso, objetivos y expectativas. Preparacion del entorno de trabajo.</p></div>
+            <div class="info-card"><h3>Instalacion de Software</h3><p>Instalacion guiada de QGIS (SIG de codigo abierto) y GeoDa (analisis exploratorio espacial). Verificacion de funcionamiento.</p></div>
+            <div class="info-card"><h3>Datos de Practica</h3><p>Descarga de censos de poblacion, encuestas georreferenciadas (CASEN), shapefiles de areas administrativas y bases de datos sociologicas.</p></div>
+          </div>
+        </div>
+        <div class="tab-content" id="mod1">
+          <div class="info-cards">
+            <div class="info-card"><h3>Sesion 1: Pensamiento Espacial</h3><p>Conceptos basicos de razonamiento espacial aplicado a la sociologia. Por que el "donde" importa en la investigacion social.</p></div>
+            <div class="info-card"><h3>Sesion 2: Datos y Proyecciones</h3><p>Sistemas de coordenadas, proyecciones cartograficas, fuentes de datos (INE, geoportales). Carga de shapefiles en QGIS, join de tablas sociologicas (.csv) a capas geograficas. Primer mapa coropletico.</p></div>
+          </div>
+        </div>
+        <div class="tab-content" id="mod2">
+          <div class="info-cards">
+            <div class="info-card"><h3>Sesion 3: GeoBasico</h3><p>Interfaz de GeoDa, carga de archivos .shp, histogramas vinculados a mapas. Identificacion visual de outliers en variables sociologicas (tasa de desempleo).</p></div>
+            <div class="info-card"><h3>Sesion 4: Autocorrelacion</h3><p>Mapas de categorias, cuantiles y percentiles. Matriz de pesos espaciales (contigüidad, distancia). Diagrama de Dispersión de Moran. Interpretacion de clusters: High-High, Low-Low, High-Low, Low-High.</p></div>
+          </div>
+        </div>
+        <div class="tab-content" id="mod3">
+          <div class="info-cards">
+            <div class="info-card"><h3>Sesion 5: Segregacion</h3><p>Indice de Disimilitud, Indice de Moran como indicador de segregacion. LISA Cluster para identificar clusters significativos de ingresos, acceso a internet, escolaridad.</p></div>
+            <div class="info-card"><h3>Sesion 6: Accesibilidad</h3><p>Geografia de la accesibilidad y justicia espacial. Analisis de proximidad (buffers) en QGIS. Cruze con datos de nivel socioeconomico para analisis de equidad en servicios.</p></div>
+          </div>
+        </div>
+        <div class="tab-content" id="mod4">
+          <div class="info-cards">
+            <div class="info-card"><h3>Sesion 7: Flujo Completo</h3><p>Preparar datos en hoja de calculo &rarr; Mapa base y join en QGIS &rarr; Exportar a GeoDa para AEDE (pesos, Moran, LISA) &rarr; Volver a QGIS para mapa final de publicacion.</p></div>
+            <div class="info-card"><h3>Sesion 8: Proyecto Final</h3><p>Presentacion de mini-proyectos: pregunta de investigacion, mapa base QGIS, resultados de autocorrelacion GeoDa, interpretacion sociologica de patrones encontrados.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVALUACION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Evaluacion</h2>
+      <p class="section-subtitle fade-in">Criterios de evaluacion del curso</p>
+
+      <div class="info-cards" style="max-width:900px;margin:0 auto;">
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:var(--gradient-accent);">40%</div>
+          <h3>Ejercicios Practicos Semanales</h3><p>Entrega de scripts, mapas y respuestas a preguntas cortas de cada sesion.</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:var(--gradient-warm);">10%</div>
+          <h3>Participacion en Foros</h3><p>Discusion sobre las implicancias sociologicas de los ejercicios realizados.</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:var(--gradient-map);">50%</div>
+          <h3>Proyecto Final</h3><p>Diseno, ejecucion y presentacion de un analisis espacial sobre un problema sociologico. Incluye mapa QGIS, resultados GeoDa e interpretacion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>🗺️ SIG + GeoDa para Sociologos</h3><p>Fundamentos de Razonamiento Espacial. Curso presencial de 40 horas.</p></div>
+        <div><h4>Navegacion</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="programa.html">Programa</a></li><li><a href="materiales.html">Materiales</a></li><li><a href="proyecto-final.html">Proyecto Final</a></li></ul></div>
+        <div><h4>Software</h4><ul><li><a href="https://qgis.org" target="_blank">QGIS</a></li><li><a href="https://geodacenter.github.io" target="_blank">GeoDa</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Curso Presencial</li><li>40 horas</li><li>Nivel Introductorio/Intermedio</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>2026 Fundamentos de Razonamiento Espacial.</span><span>SIG + GeoDa para Sociologos</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

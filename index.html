@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos de Razonamiento Espacial con SIG y GeoDa</title>
+  <meta name="description" content="Curso introductorio de Sistemas de Informacion Geografica y GeoDa para sociologos e investigadores en ciencias sociales">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="logo-icon">🗺️</span>
+        SIG + GeoDa
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="proyecto-final.html">Proyecto Final</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid"></div>
+    <div class="hero-particles">
+      <div class="particle" style="width:5px;height:5px;left:8%;animation-duration:18s;animation-delay:0s"></div>
+      <div class="particle" style="width:4px;height:4px;left:22%;animation-duration:22s;animation-delay:3s"></div>
+      <div class="particle" style="width:7px;height:7px;left:38%;animation-duration:15s;animation-delay:1s"></div>
+      <div class="particle" style="width:3px;height:3px;left:55%;animation-duration:20s;animation-delay:5s"></div>
+      <div class="particle" style="width:6px;height:6px;left:72%;animation-duration:17s;animation-delay:2s"></div>
+      <div class="particle" style="width:4px;height:4px;left:88%;animation-duration:24s;animation-delay:4s"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>📡</span> Curso Presencial &mdash; 40 Horas
+        </div>
+        <h1>Fundamentos de <span class="highlight">Razonamiento Espacial</span> con SIG y GeoDa para Sociologos</h1>
+        <p>Desarrolla la capacidad de pensar espacialmente y aplica herramientas de analisis geoespacial para enriquecer tu investigacion sociologica con una nueva dimension: el territorio.</p>
+        <div class="hero-actions">
+          <a href="programa.html" class="btn btn-primary">Ver Programa &#8594;</a>
+          <a href="materiales.html" class="btn btn-outline">Descargar Materiales</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number">40h</div>
+            <div class="label">Carga horaria</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">9</div>
+            <div class="label">Sesiones</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">15h</div>
+            <div class="label">Teoria</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">25h</div>
+            <div class="label">Practica</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-map-preview">
+          <div class="map-overlay-grid"></div>
+          <div class="map-dots">
+            <div class="map-dot" style="top:20%;left:30%;background:#00b4d8;animation-delay:0s"></div>
+            <div class="map-dot" style="top:35%;left:55%;background:#48cae4;animation-delay:0.5s"></div>
+            <div class="map-dot" style="top:50%;left:25%;background:#f77f00;animation-delay:1s"></div>
+            <div class="map-dot" style="top:65%;left:65%;background:#00b4d8;animation-delay:1.5s"></div>
+            <div class="map-dot" style="top:40%;left:75%;background:#fcbf49;animation-delay:0.8s"></div>
+            <div class="map-dot" style="top:75%;left:40%;background:#48cae4;animation-delay:1.2s"></div>
+            <div class="map-dot" style="top:25%;left:70%;background:#00b4d8;animation-delay:0.3s"></div>
+            <div class="map-dot" style="top:60%;left:15%;background:#f77f00;animation-delay:1.8s"></div>
+          </div>
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.15" viewBox="0 0 400 400">
+            <polygon points="80,60 160,40 200,100 180,180 100,200 60,140" fill="none" stroke="#00b4d8" stroke-width="2"/>
+            <polygon points="200,100 280,80 320,140 300,220 240,200 200,160" fill="none" stroke="#48cae4" stroke-width="2"/>
+            <polygon points="100,200 180,180 240,200 220,280 140,300 80,260" fill="none" stroke="#f77f00" stroke-width="1.5"/>
+            <polygon points="240,200 300,220 340,280 300,340 220,320 200,260" fill="none" stroke="#00b4d8" stroke-width="1.5"/>
+            <circle cx="160" cy="140" r="4" fill="#00b4d8"/><circle cx="260" cy="160" r="4" fill="#f77f00"/>
+            <circle cx="180" cy="240" r="4" fill="#48cae4"/><circle cx="300" cy="280" r="4" fill="#fcbf49"/>
+          </svg>
+          <div class="hero-map-label">
+            <strong>QGIS + GeoDa</strong> &mdash; Herramientas gratuitas para analisis espacial sociologico
+          </div>
+          <div class="floating-card" style="top:15px;right:15px;animation-delay:0s">
+            <div style="font-size:1.1rem;margin-bottom:4px">🔬</div>
+            <div><strong>AEDE</strong><br>Analisis Exploratorio<br>de Datos Espaciales</div>
+          </div>
+          <div class="floating-card" style="bottom:60px;left:15px;animation-delay:1.5s">
+            <div style="font-size:1.1rem;margin-bottom:4px">📊</div>
+            <div><strong>Moran</strong><br>Autocorrelacion<br>espacial</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBJETIVO -->
+  <section class="section" id="objetivo">
+    <div class="container">
+      <h2 class="section-title fade-in">Perfil y Requisitos</h2>
+      <p class="section-subtitle fade-in">Dirigido a sociologos e investigadores en ciencias sociales sin experiencia previa en SIG</p>
+
+      <div class="info-cards">
+        <div class="info-card fade-in">
+          <div class="card-number">&#127891;</div>
+          <h3>Perfil del Estudiante</h3>
+          <p>Sociologos, investigadores en ciencias sociales, estudiantes de posgrado en sociologia o areas afines. No se requiere experiencia previa en SIG.</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number">&#9881;</div>
+          <h3>Requisitos</h3>
+          <p>Conocimientos basicos de estadistica descriptiva y manejo de bases de datos (Excel, SPSS, Stata). No se requieren conocimientos de programacion.</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number">&#128187;</div>
+          <h3>Software Gratuito</h3>
+          <p><strong>QGIS:</strong> SIG de codigo abierto para creacion de mapas y analisis geoespacial. <strong>GeoDa:</strong> Software especializado en analisis exploratorio de datos espaciales (AEDE).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGENES SATELITALES / SIG -->
+  <section class="section" style="background:linear-gradient(180deg,#e8f0f8 0%,var(--bg) 100%)" id="galeria">
+    <div class="container">
+      <h2 class="section-title fade-in">El Mundo del Analisis Espacial</h2>
+      <p class="section-subtitle fade-in">Herramientas y tecnicas que transforman la investigacion sociologica</p>
+
+      <div class="sat-gallery">
+        <div class="sat-item fade-in">
+          <div class="sat-img" style="width:100%;height:100%;background:linear-gradient(135deg,#0d2137 0%,#1a5276 40%,#1f6f8b 70%,#48cae4 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 300 220" style="width:85%;opacity:0.9">
+              <rect width="300" height="220" fill="none"/>
+              <polygon points="30,40 100,20 150,60 130,120 60,140 20,90" fill="rgba(0,180,216,0.3)" stroke="#48cae4" stroke-width="1.5"/>
+              <polygon points="150,60 220,30 270,70 250,130 190,140 140,100" fill="rgba(72,202,228,0.2)" stroke="#48cae4" stroke-width="1.5"/>
+              <polygon points="60,140 130,120 190,140 180,200 100,210 40,170" fill="rgba(247,127,0,0.2)" stroke="#f77f00" stroke-width="1.5"/>
+              <polygon points="190,140 250,130 290,180 260,210 180,200" fill="rgba(252,191,73,0.15)" stroke="#fcbf49" stroke-width="1.5"/>
+              <circle cx="100" cy="80" r="5" fill="#00b4d8"/><circle cx="200" cy="90" r="5" fill="#f77f00"/>
+              <circle cx="130" cy="160" r="5" fill="#48cae4"/><circle cx="240" cy="170" r="5" fill="#fcbf49"/>
+              <text x="80" y="78" fill="white" font-size="7" font-family="Inter" opacity="0.7">Cluster H-H</text>
+              <text x="180" y="88" fill="white" font-size="7" font-family="Inter" opacity="0.7">Outlier H-L</text>
+            </svg>
+          </div>
+          <div class="sat-overlay">
+            <div><h4>Coropletos y Capas</h4><p>Mapas tematicos por comunas y barrios</p></div>
+          </div>
+        </div>
+
+        <div class="sat-item fade-in">
+          <div class="sat-img" style="width:100%;height:100%;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 40%,#0f3460 70%,#533483 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 300 220" style="width:85%;opacity:0.9">
+              <rect width="300" height="220" fill="none"/>
+              <line x1="30" y1="190" x2="280" y2="190" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <line x1="30" y1="10" x2="30" y2="190" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <polyline points="40,160 80,140 120,100 160,110 200,60 240,80 270,40" fill="none" stroke="#00b4d8" stroke-width="2.5"/>
+              <polyline points="40,170 80,165 120,150 160,155 200,130 240,140 270,120" fill="none" stroke="#f77f00" stroke-width="2" stroke-dasharray="5,3"/>
+              <circle cx="120" cy="100" r="4" fill="#00b4d8"/><circle cx="200" cy="60" r="4" fill="#00b4d8"/>
+              <circle cx="270" cy="40" r="6" fill="#fcbf49" stroke="white" stroke-width="1.5"/>
+              <text x="50" y="15" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Inter">MORAN I = 0.42***</text>
+              <text x="230" y="210" fill="rgba(255,255,255,0.4)" font-size="7" font-family="Inter">Dispersión de Moran</text>
+            </svg>
+          </div>
+          <div class="sat-overlay">
+            <div><h4>Indice de Moran</h4><p>Autocorrelacion espacial y clusters</p></div>
+          </div>
+        </div>
+
+        <div class="sat-item fade-in">
+          <div class="sat-img" style="width:100%;height:100%;background:linear-gradient(135deg,#1b5e20 0%,#2e7d32 40%,#43a047 70%,#66bb6a 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 300 220" style="width:85%;opacity:0.9">
+              <rect width="300" height="220" fill="none"/>
+              <rect x="40" y="30" width="70" height="160" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <rect x="120" y="60" width="70" height="130" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <rect x="200" y="20" width="70" height="170" rx="3" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <rect x="40" y="80" width="70" height="110" rx="0" fill="rgba(0,180,216,0.4)"/>
+              <rect x="120" y="100" width="70" height="90" rx="0" fill="rgba(247,127,0,0.4)"/>
+              <rect x="200" y="50" width="70" height="140" rx="0" fill="rgba(72,202,228,0.4)"/>
+              <text x="55" y="205" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Inter">Q1</text>
+              <text x="140" y="205" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Inter">Q2</text>
+              <text x="220" y="205" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Inter">Q3</text>
+              <text x="80" y="15" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Inter">Histograma Vinculado</text>
+            </svg>
+          </div>
+          <div class="sat-overlay">
+            <div><h4>Histogramas Vinculados</h4><p>Exploracion de distribuciones sociales</p></div>
+          </div>
+        </div>
+
+        <div class="sat-item fade-in">
+          <div class="sat-img" style="width:100%;height:100%;background:linear-gradient(135deg,#4a148c 0%,#6a1b9a 40%,#8e24aa 70%,#ab47bc 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 300 220" style="width:85%;opacity:0.9">
+              <rect width="300" height="220" fill="none"/>
+              <circle cx="150" cy="110" r="70" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+              <circle cx="150" cy="110" r="45" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <circle cx="150" cy="110" r="20" fill="rgba(0,180,216,0.3)" stroke="#00b4d8" stroke-width="1.5"/>
+              <circle cx="100" cy="80" r="8" fill="rgba(247,127,0,0.5)" stroke="#f77f00" stroke-width="1.5"/>
+              <circle cx="200" cy="75" r="6" fill="rgba(72,202,228,0.5)" stroke="#48cae4" stroke-width="1.5"/>
+              <circle cx="190" cy="150" r="7" fill="rgba(252,191,73,0.5)" stroke="#fcbf49" stroke-width="1.5"/>
+              <circle cx="90" cy="145" r="5" fill="rgba(247,127,0,0.4)" stroke="#f77f00" stroke-width="1"/>
+              <line x1="150" y1="110" x2="100" y2="80" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="150" y1="110" x2="200" y2="75" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,3"/>
+              <text x="100" y="200" fill="rgba(255,255,255,0.5)" font-size="7" font-family="Inter">Matriz de Pesos Espaciales</text>
+            </svg>
+          </div>
+          <div class="sat-overlay">
+            <div><h4>Matriz de Pesos Espaciales</h4><p>Definicion de vecindad y contiguidad</p></div>
+          </div>
+        </div>
+
+        <div class="sat-item fade-in">
+          <div class="sat-img" style="width:100%;height:100%;background:linear-gradient(135deg,#b71c1c 0%,#c62828 40%,#e53935 70%,#ef5350 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 300 220" style="width:85%;opacity:0.9">
+              <rect width="300" height="220" fill="none"/>
+              <text x="80" y="20" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Inter">LISA Cluster Map</text>
+              <polygon points="40,50 100,30 130,70 110,120 50,130 30,90" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <polygon points="130,70 200,40 240,80 220,140 160,150 120,110" fill="rgba(0,180,216,0.4)" stroke="#48cae4" stroke-width="1.5"/>
+              <polygon points="110,120 160,150 180,200 120,210 70,180 50,130" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+              <polygon points="200,40 270,50 280,110 240,130 220,140 200,100" fill="rgba(247,127,0,0.4)" stroke="#f77f00" stroke-width="1.5"/>
+              <polygon points="160,150 220,140 260,180 230,210 170,200" fill="rgba(247,127,0,0.3)" stroke="#f77f00" stroke-width="1"/>
+              <text x="145" y="95" fill="white" font-size="6" font-family="Inter">H-H</text>
+              <text x="215" y="85" fill="white" font-size="6" font-family="Inter">L-H</text>
+              <text x="80" y="105" fill="white" font-size="6" font-family="Inter">L-L</text>
+              <text x="210" y="170" fill="white" font-size="6" font-family="Inter">H-L</text>
+            </svg>
+          </div>
+          <div class="sat-overlay">
+            <div><h4>LISA Cluster Map</h4><p>Clusters estadisticamente significativos</p></div>
+          </div>
+        </div>
+
+        <div class="sat-item fade-in">
+          <div class="sat-img" style="width:100%;height:100%;background:linear-gradient(135deg,#e65100 0%,#f57c00 40%,#fb8c00 70%,#ffa726 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 300 220" style="width:85%;opacity:0.9">
+              <rect width="300" height="220" fill="none"/>
+              <circle cx="100" cy="100" r="30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <circle cx="100" cy="100" r="50" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4,4"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+              <circle cx="100" cy="100" r="5" fill="#00b4d8"/>
+              <circle cx="200" cy="80" r="4" fill="white" opacity="0.8"/>
+              <circle cx="180" cy="150" r="4" fill="white" opacity="0.8"/>
+              <circle cx="60" cy="160" r="4" fill="white" opacity="0.8"/>
+              <circle cx="220" cy="140" r="3" fill="white" opacity="0.5"/>
+              <text x="80" y="200" fill="rgba(255,255,255,0.6)" font-size="7" font-family="Inter">Buffer 500m | 1km | 3km</text>
+              <text x="120" y="15" fill="rgba(255,255,255,0.5)" font-size="8" font-family="Inter">Analisis de Proximidad</text>
+            </svg>
+          </div>
+          <div class="sat-overlay">
+            <div><h4>Analisis de Proximidad</h4><p>Buffers y areas de cobertura de servicios</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EJES / MODULOS -->
+  <section class="section" id="modulos">
+    <div class="container">
+      <h2 class="section-title fade-in">Estructura Modular del Curso</h2>
+      <p class="section-subtitle fade-in">4 modulos que llevan del pensamiento espacial basico al proyecto de investigacion integrado</p>
+
+      <div class="info-cards">
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:var(--gradient-warm);">0</div>
+          <h3>Instalacion y Preparacion</h3>
+          <p>Bienvenida, instalacion guiada de QGIS y GeoDa, descarga de datos de practica (censos, shapefiles, encuestas georreferenciadas).</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number">1</div>
+          <h3>Fundamentos del Razonamiento Espacial</h3>
+          <p>Pensando espacialmente como sociologo. Proyecciones cartograficas, fuentes de datos, carga de shapefiles, joins de datos sociologicos y primer mapa coropletico.</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number">2</div>
+          <h3>Introduccion a GeoDa</h3>
+          <p>Analisis Exploratorio de Datos Espaciales (AEDE). Histogramas vinculados, mapas de categorias, matrices de pesos, Diagrama de Dispersión de Moran y clusters espaciales.</p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number">3</div>
+          <h3>Analisis Espacial Aplicado</h3>
+          <p>Segregacion residencial, desigualdad, LISA Cluster, geografia de la accesibilidad, analisis de proximidad (buffers) y justicia espacial.</p>
+        </div>
+        <div class="info-card fade-in" style="grid-column:1/-1;max-width:550px;margin:0 auto;">
+          <div class="card-number" style="background:var(--gradient-accent);">&#9733;</div>
+          <h3>Integracion y Proyecto Final</h3>
+          <p>Flujo completo QGIS + GeoDa: limpieza de datos, mapas base, AEDE, LISA, y mapa final de publicacion. Presentacion de un mini-proyecto de investigacion con evidencia espacial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTORES / CTA -->
+  <section class="section" style="background:linear-gradient(180deg,#e8f0f8 0%,var(--bg) 100%)" id="recursos">
+    <div class="container">
+      <h2 class="section-title fade-in">Recursos del Curso</h2>
+      <p class="section-subtitle fade-in">Todo lo que necesitas para comenzar a analizar el espacio</p>
+
+      <div class="info-cards" style="max-width:900px;margin:0 auto;">
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:#1b5e20;">&#128187;</div>
+          <h3>Software Gratuito</h3>
+          <p>
+            <a href="https://qgis.org" target="_blank">&#8594; QGIS</a> &mdash; SIG de codigo abierto<br>
+            <a href="https://geodacenter.github.io" target="_blank">&#8594; GeoDa</a> &mdash; Analisis exploratorio espacial
+          </p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:#e65100;">&#128218;</div>
+          <h3>Datos de Practica</h3>
+          <p>
+            Censos de Poblacion y Vivienda<br>
+            Encuestas CASEN (Chile)<br>
+            Datos abiertos de municipalidades<br>
+            Shapefiles de unidades territoriales
+          </p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:#4a148c;">&#128214;</div>
+          <h3>Bibliografia Clave</h3>
+          <p>
+            Anselin, L. (1995) &mdash; LISA<br>
+            O'Sullivan & Unwin (2010) &mdash; Geographic Information Analysis<br>
+            Sociologia urbana y cuantitativa con analisis espacial
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background:var(--gradient-hero);color:white;text-align:center;">
+    <div class="container fade-in">
+      <h2 style="font-family:var(--font-display);font-size:2rem;margin-bottom:16px;">Comienza tu Formacion en Analisis Espacial</h2>
+      <p style="opacity:0.88;margin-bottom:32px;max-width:550px;margin-left:auto;margin-right:auto;">
+        40 horas de teoria y practica para transformar tu investigacion sociologica con una dimension geoespacial.
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="programa.html" class="btn btn-primary">Ver Programa Completo</a>
+        <a href="materiales.html" class="btn btn-outline">Descargar Materiales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>🗺️ SIG + GeoDa para Sociologos</h3>
+          <p>Fundamentos de Razonamiento Espacial con Sistemas de Informacion Geografica y GeoDa. Curso presencial de 40 horas.</p>
+        </div>
+        <div>
+          <h4>Navegacion</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="programa.html">Programa</a></li>
+            <li><a href="materiales.html">Materiales</a></li>
+            <li><a href="proyecto-final.html">Proyecto Final</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Software</h4>
+          <ul>
+            <li><a href="https://qgis.org" target="_blank">QGIS</a></li>
+            <li><a href="https://geodacenter.github.io" target="_blank">GeoDa</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>Curso Presencial</li>
+            <li>40 horas (15h teoria + 25h practica)</li>
+            <li>Nivel Introductorio/Intermedio</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>2026 Fundamentos de Razonamiento Espacial. Todos los derechos reservados.</span>
+        <span>SIG + GeoDa para Sociologos</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

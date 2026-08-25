@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materiales - SIG y GeoDa para Sociologos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand"><span class="logo-icon">🗺️</span>SIG + GeoDa</a>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="programa.html">Programa</a></li>
+        <li><a href="materiales.html" class="active">Materiales</a></li>
+        <li><a href="proyecto-final.html">Proyecto Final</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section style="padding:140px 0 60px;background:var(--gradient-map);color:white;text-align:center;">
+    <div class="container">
+      <div class="hero-tag" style="display:inline-flex;margin-bottom:20px;background:rgba(0,180,216,0.15);border:1px solid rgba(0,180,216,0.25);padding:6px 16px;border-radius:30px;font-size:0.85rem;">
+        <span>📦</span> Descarga los materiales de cada sesion
+      </div>
+      <h1 style="font-family:var(--font-display);font-size:2.6rem;margin-bottom:16px;">Materiales del Curso</h1>
+      <p style="opacity:0.88;font-size:1.05rem;max-width:600px;margin:0 auto;">
+        Presentaciones, guias de practica, datos de ejemplo y shapefiles para cada sesion
+      </p>
+    </div>
+  </section>
+
+  <section style="padding:40px 0 0;">
+    <div class="container">
+      <div class="info-box info-box-warning fade-in">
+        <span class="box-icon">&#128274;</span>
+        <div><p><strong>Nota:</strong> Los archivos ZIP contienen todos los recursos necesarios para cada practica, incluyendo datos de ejemplo, shapefiles, guias paso a paso y presentaciones. Descarga el paquete completo de cada sesion.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title fade-in">Materiales por Sesion</h2>
+      <p class="section-subtitle fade-in">Descarga los paquetes completos o archivos individuales</p>
+
+      <div class="materials-grid">
+
+        <!-- SESION 0 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#e65100,#f57c00);">
+            <div class="session-icon">&#9881;</div>
+            <div>
+              <h3>Sesion 0: Instalacion y Bienvenida</h3>
+              <div class="session-meta">Pre-curso | 4 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia de instalacion QGIS</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia de instalacion GeoDa</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: Bienvenida y objetivos</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 0</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-00/paquete-sesion-00.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 1 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header">
+            <div class="session-icon">&#127758;</div>
+            <div>
+              <h3>Sesion 1: Pensamiento Espacial</h3>
+              <div class="session-meta">Modulo 1 | 4 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: Razonamiento espacial para sociologos</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Lectura: Por que importa el "donde"</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Shapefile: Unidades territoriales ejemplo</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 1</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-01/paquete-sesion-01.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 2 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#1a5276,#2980b9);">
+            <div class="session-icon">&#128506;</div>
+            <div>
+              <h3>Sesion 2: Datos, Proyecciones y Mapas</h3>
+              <div class="session-meta">Modulo 1 | 5 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: Coordenadas y proyecciones</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Shapefile: Comunas/Barrios</span></li>
+              <li><span class="file-icon file-csv">CSV</span><span>Datos sociologicos (.csv) para join</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Paso a paso mapa coropletico en QGIS</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 2</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-02/paquete-sesion-02.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 3 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#4a148c,#7b1fa2);">
+            <div class="session-icon">&#128200;</div>
+            <div>
+              <h3>Sesion 3: Primeros Pasos con GeoDa</h3>
+              <div class="session-meta">Modulo 2 | 5 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: AEDE y autocorrelacion</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Shapefile: Datos de desempleo</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Interfaz de GeoDa y histogramas</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Ejercicio: Identificar outliers visualmente</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 3</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-03/paquete-sesion-03.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 4 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#006064,#00838f);">
+            <div class="session-icon">&#128210;</div>
+            <div>
+              <h3>Sesion 4: Cartografia y Moran</h3>
+              <div class="session-meta">Modulo 2 | 5 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: Indice de Moran y vecindad</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Shapefile: Escolaridad por zona</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Matriz de pesos espaciales en GeoDa</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Diagrama de Dispersión de Moran</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 4</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-04/paquete-sesion-04.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 5 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#b71c1c,#d32f2f);">
+            <div class="session-icon">&#128200;</div>
+            <div>
+              <h3>Sesion 5: Segregacion y Desigualdad</h3>
+              <div class="session-meta">Modulo 3 | 5 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: Segregacion residencial</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Shapefile: Ingresos y acceso a internet</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: LISA Cluster en GeoDa</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Ejercicio: Interpretar clusters de pobreza</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 5</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-05/paquete-sesion-05.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 6 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#1b5e20,#388e3c);">
+            <div class="session-icon">&#127963;</div>
+            <div>
+              <h3>Sesion 6: Acceso a Servicios</h3>
+              <div class="session-meta">Modulo 3 | 5 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Presentacion: Justicia espacial</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Capa: Centros de salud/colegios (puntos)</span></li>
+              <li><span class="file-icon file-geo">SHP</span><span>Capa: Poligonos de poblacion</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Analisis de proximidad (buffers) en QGIS</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 6</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-06/paquete-sesion-06.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 7 -->
+        <div class="material-card fade-in">
+          <div class="material-card-header" style="background:linear-gradient(135deg,#0d47a1,#1976d2);">
+            <div class="session-icon">&#128295;</div>
+            <div>
+              <h3>Sesion 7: Integracion QGIS + GeoDa</h3>
+              <div class="session-meta">Modulo 4 | 5 horas</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia completa: Flujo de trabajo integrado</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Checklist de pasos (QGIS &rarr; GeoDa &rarr; QGIS)</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Redactar hallazgos con evidencia espacial</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span>Paquete completo Sesion 7</span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-07/paquete-sesion-07.zip" class="btn btn-secondary btn-sm" download>&#11015; Descargar ZIP</a>
+          </div>
+        </div>
+
+        <!-- SESION 8 - PROYECTO FINAL -->
+        <div class="material-card fade-in" style="grid-column:1/-1;max-width:500px;margin:0 auto;">
+          <div class="material-card-header" style="background:var(--gradient-accent);color:var(--primary);">
+            <div class="session-icon" style="background:rgba(0,0,0,0.12);">&#9733;</div>
+            <div>
+              <h3>Sesion 8: Proyecto Final</h3>
+              <div class="session-meta" style="opacity:0.7;">Modulo 4 | Evaluacion</div>
+            </div>
+          </div>
+          <div class="material-card-body">
+            <ul class="material-list">
+              <li><span class="file-icon file-pdf">PDF</span><span>Plantilla: Estructura del mini-proyecto</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Rubrica de evaluacion del proyecto final</span></li>
+              <li><span class="file-icon file-pdf">PDF</span><span>Guia: Preparar presentacion oral</span></li>
+              <li><span class="file-icon file-zip">ZIP</span><span><strong>Paquete completo Proyecto Final</strong></span></li>
+            </ul>
+          </div>
+          <div class="material-card-footer">
+            <a href="materiales/sesion-08/paquete-sesion-08.zip" class="btn btn-primary" download>&#11015; Descargar Paquete Final</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS ADICIONALES -->
+  <section class="section" style="background:linear-gradient(180deg,#e8f0f8 0%,var(--bg) 100%);">
+    <div class="container">
+      <h2 class="section-title fade-in">Recursos Adicionales</h2>
+      <p class="section-subtitle fade-in">Fuentes de datos y herramientas para tu investigacion</p>
+
+      <div class="info-cards">
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:#1b5e20;">&#128187;</div>
+          <h3>Software</h3>
+          <p>
+            <a href="https://qgis.org" target="_blank">&#8594; QGIS (descarga gratuita)</a><br>
+            <a href="https://geodacenter.github.io" target="_blank">&#8594; GeoDa (descarga gratuita)</a>
+          </p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:#e65100;">&#128200;</div>
+          <h3>Fuentes de Datos</h3>
+          <p>
+            <a href="https://www.ine.cl" target="_blank">&#8594; INE Chile (Censos)</a><br>
+            <a href="https://www.gob.cl/casen" target="_blank">&#8594; Encuesta CASEN</a><br>
+            <a href="https://datos.gob.cl" target="_blank">&#8594; Datos abiertos Chile</a><br>
+            <a href="https://www.inegi.org.mx" target="_blank">&#8594; INEGI (Mexico)</a>
+          </p>
+        </div>
+        <div class="info-card fade-in">
+          <div class="card-number" style="background:#4a148c;">&#128214;</div>
+          <h3>Bibliografia</h3>
+          <p>
+            Anselin, L. (1995). "Local Indicators of Spatial Association - LISA"<br>
+            O'Sullivan & Unwin (2010). "Geographic Information Analysis"<br>
+            Sociologia urbana y cuantitativa con analisis espacial
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>🗺️ SIG + GeoDa para Sociologos</h3><p>Fundamentos de Razonamiento Espacial. Curso presencial de 40 horas.</p></div>
+        <div><h4>Navegacion</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="programa.html">Programa</a></li><li><a href="materiales.html">Materiales</a></li><li><a href="proyecto-final.html">Proyecto Final</a></li></ul></div>
+        <div><h4>Software</h4><ul><li><a href="https://qgis.org" target="_blank">QGIS</a></li><li><a href="https://geodacenter.github.io" target="_blank">GeoDa</a></li></ul></div>
+        <div><h4>Contacto</h4><ul><li>Curso Presencial</li><li>40 horas</li><li>Nivel Introductorio/Intermedio</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>2026 Fundamentos de Razonamiento Espacial.</span><span>SIG + GeoDa para Sociologos</span></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
