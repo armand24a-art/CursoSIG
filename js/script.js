@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Toast helper
+  // Toast helper (disponible para futuros usos de la interfaz)
   const toast = document.getElementById('toast');
   let toastTimer;
   function showToast(msg) {
@@ -41,27 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
   }
-
-  // Slots de "entrega" por práctica — quedan almacenados solo en memoria
-  // de esta pestaña, ya que GitHub Pages no ofrece backend de subida de
-  // archivos. El nombre del archivo elegido se muestra como confirmación
-  // visual local; los envíos reales del curso se hacen por el formulario
-  // de entrega final.
-  document.querySelectorAll('.upload-slot').forEach(slot => {
-    const input = slot.querySelector('input[type="file"]');
-    const fname = slot.querySelector('.fname');
-    if (!input) return;
-    slot.addEventListener('click', () => input.click());
-    slot.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); }
-    });
-    input.addEventListener('change', () => {
-      if (input.files && input.files[0]) {
-        const f = input.files[0];
-        if (fname) fname.textContent = `Seleccionado: ${f.name}`;
-        showToast(`"${f.name}" listo — recuerda enviarlo por el canal indicado por el instructor.`);
-      }
-    });
-  });
 
 });
