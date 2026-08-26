@@ -27,6 +27,11 @@
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 
+html, body{
+  max-width: 100%;
+  overflow-x: hidden; /* stops any oversized element from pushing content (and links) off-screen */
+}
+
 body{
   margin:0;
   background: var(--paper);
@@ -41,19 +46,29 @@ body{
   background-position: -1px -1px;
 }
 
+/* Every image scales to its container by default, never forces page width */
+img{ max-width: 100%; height: auto; }
+
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
 a{ color: inherit; }
-img{ max-width:100%; display:block; }
+img{ display:block; }
 
 .wrap{
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 18px;
+  width: 100%;
 }
+@media (min-width: 640px){
+  .wrap{ padding: 0 28px; }
+}
+
+.hero-cta, .card-actions{ max-width: 100%; }
+.btn{ max-width: 100%; }
 
 ::selection{ background: var(--ochre); color: var(--white); }
 
@@ -84,21 +99,30 @@ img{ max-width:100%; display:block; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  height: 68px;
+  gap: 12px;
+  height: 64px;
 }
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:8px;
   font-family: var(--font-display);
   font-weight:600;
-  font-size: 19px;
+  font-size: clamp(14px, 3.6vw, 19px);
   color: var(--ink);
   text-decoration:none;
+  min-width:0;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
 }
 .brand-mark{
-  width:26px; height:26px;
+  width:24px; height:24px;
   flex-shrink:0;
+}
+@media (min-width: 640px){
+  .site-header .wrap{ height: 68px; }
+  .brand-mark{ width:26px; height:26px; }
 }
 nav.main-nav{
   display:flex;
@@ -133,20 +157,27 @@ nav.main-nav a:hover::after{ transform: scaleX(1); }
 }
 .nav-toggle svg{ width:18px; height:18px; display:block; }
 
-@media (max-width: 860px){
+@media (max-width: 900px){
   nav.main-nav{
     display:none;
     position:absolute;
-    top: 68px; left:0; right:0;
+    top: 64px; left:0; right:0;
+    z-index: 60;
     background: var(--paper);
     border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 24px rgba(22,40,61,0.12);
     flex-direction:column;
     gap:0;
     padding: 6px 28px 16px;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
   }
   nav.main-nav.open{ display:flex; }
-  nav.main-nav a{ padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+  nav.main-nav a{ padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
+}
+@media (min-width: 901px){
+  .nav-toggle{ display:none; }
 }
 
 /* ---------- Hero ---------- */
@@ -160,6 +191,8 @@ nav.main-nav a:hover::after{ transform: scaleX(1); }
 .hero::before{
   content:"";
   position:absolute; inset:0;
+  z-index:0;
+  pointer-events:none; /* decorative only — never blocks taps on buttons/links above it */
   background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.png?width=1400");
   background-size: cover;
   background-position: 65% 40%;
@@ -168,12 +201,17 @@ nav.main-nav a:hover::after{ transform: scaleX(1); }
 .hero::after{
   content:"";
   position:absolute; inset:0;
+  z-index:1;
+  pointer-events:none; /* decorative only — never blocks taps on buttons/links above it */
   background: linear-gradient(100deg, rgba(22,40,61,0.97) 0%, rgba(22,40,61,0.86) 42%, rgba(31,63,68,0.55) 100%);
 }
 .hero-inner{
   position:relative;
   z-index:2;
-  padding: 96px 0 84px;
+  padding: 72px 0 60px;
+}
+@media (min-width: 640px){
+  .hero-inner{ padding: 96px 0 84px; }
 }
 .hero .coord{ color: rgba(255,255,255,0.65); }
 .hero h1{
@@ -206,11 +244,12 @@ nav.main-nav a:hover::after{ transform: scaleX(1); }
 }
 .hero-cta{ display:flex; gap:14px; flex-wrap:wrap; }
 
-/* crop marks — like registration marks on a printed map sheet */
+/* crop marks — like registration marks on a printed map sheet, purely decorative */
 .crop{
   position:absolute; width:22px; height:22px;
   border: 1px solid rgba(251,249,244,0.55);
   z-index:3;
+  pointer-events:none;
 }
 .crop::before, .crop::after{ content:""; position:absolute; background: rgba(251,249,244,0.55); }
 .crop::before{ left:50%; top:-8px; bottom:-8px; width:1px; transform:translateX(-50%); }
@@ -219,7 +258,7 @@ nav.main-nav a:hover::after{ transform: scaleX(1); }
 .crop.tr{ top:20px; right:20px; }
 .crop.bl{ bottom:20px; left:20px; }
 .crop.br{ bottom:20px; right:20px; }
-@media (max-width: 640px){ .crop{ display:none; } }
+@media (max-width: 760px){ .crop{ display:none; } }
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -258,8 +297,12 @@ nav.main-nav a:hover::after{ transform: scaleX(1); }
 .btn svg{ width:15px; height:15px; }
 
 /* ---------- Sections ---------- */
-section{ padding: 84px 0; }
-section.tight{ padding: 56px 0; }
+section{ padding: 52px 0; }
+section.tight{ padding: 40px 0; }
+@media (min-width: 640px){
+  section{ padding: 84px 0; }
+  section.tight{ padding: 56px 0; }
+}
 .section-head{
   max-width: 640px;
   margin-bottom: 46px;
@@ -323,9 +366,9 @@ section.tight{ padding: 56px 0; }
 }
 .legend-item{
   display:grid;
-  grid-template-columns: 64px 1fr;
-  gap: 22px;
-  padding: 26px 0;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line);
 }
 .legend-glyph{
@@ -334,7 +377,11 @@ section.tight{ padding: 56px 0; }
   justify-content:center;
   padding-top: 4px;
 }
-.legend-glyph svg{ width:30px; height:30px; }
+.legend-glyph svg{ width:26px; height:26px; }
+@media (min-width: 640px){
+  .legend-item{ grid-template-columns: 64px 1fr; gap: 22px; padding: 26px 0; }
+  .legend-glyph svg{ width:30px; height:30px; }
+}
 .legend-item h3{
   font-family: var(--font-display);
   font-size: 1.2rem;
@@ -368,6 +415,7 @@ table.schedule{
   min-width: 760px;
   background: var(--white);
 }
+table.schedule.wide{ min-width: 1360px; }
 table.schedule th{
   text-align:left;
   font-family: var(--font-mono);
@@ -389,6 +437,13 @@ table.schedule td{
 table.schedule tr:last-child td{ border-bottom:none; }
 table.schedule td.date{ font-family: var(--font-mono); font-size: 0.85rem; color: var(--forest); white-space:nowrap; }
 table.schedule td.mod{ font-family: var(--font-mono); font-size: 0.8rem; color: var(--slate); }
+table.schedule.wide td:nth-child(3),
+table.schedule.wide td:nth-child(5),
+table.schedule.wide td:nth-child(6),
+table.schedule.wide td:nth-child(7){ white-space:nowrap; color: var(--slate); font-size: 0.85rem; }
+table.schedule.wide td:nth-child(4){ min-width: 190px; }
+table.schedule.wide td:nth-child(8){ min-width: 320px; color:#3c4a52; }
+table.schedule.wide td:nth-child(9){ min-width: 220px; }
 
 /* ---------- Prácticas (cards con descarga) ---------- */
 .practicas-grid{
@@ -486,12 +541,19 @@ table.schedule td.mod{ font-family: var(--font-mono); font-size: 0.8rem; color: 
 .form-frame-wrap{
   border: 1px solid var(--line);
   background: var(--white);
-  padding: 16px;
+  padding: 12px;
+  max-width: 100%;
+  overflow: hidden;
 }
 .form-frame-wrap iframe{
   width:100%;
-  height: 560px;
+  height: 420px;
   border:0;
+  display:block;
+}
+@media (min-width: 640px){
+  .form-frame-wrap{ padding: 16px; }
+  .form-frame-wrap iframe{ height: 560px; }
 }
 
 /* ---------- Instructor ---------- */
@@ -555,19 +617,23 @@ table.schedule td.mod{ font-family: var(--font-mono); font-size: 0.8rem; color: 
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.image-band figure{ margin:0; position:relative; overflow:hidden; height: 360px; }
-.image-band img{ width:100%; height:100%; object-fit:cover; }
+.image-band figure{ margin:0; position:relative; overflow:hidden; height: 320px; max-width:100%; }
+.image-band img{ width:100%; height:100%; object-fit:cover; object-position:center; }
 .image-band figcaption{
   position:absolute; left:0; right:0; bottom:0;
   background: linear-gradient(0deg, rgba(22,40,61,0.85), transparent);
   color: var(--white);
   font-family: var(--font-mono);
-  font-size: 11.5px;
-  padding: 30px 16px 12px;
+  font-size: 11px;
+  padding: 26px 14px 10px;
 }
-@media (max-width: 760px){
+@media (max-width: 900px){
   .image-band{ grid-template-columns: 1fr; }
-  .image-band figure{ height: 240px; }
+  .image-band figure{ height: 220px; }
+}
+@media (max-width: 480px){
+  .image-band figure{ height: 170px; }
+  .image-band figcaption{ font-size: 10px; padding: 20px 12px 8px; }
 }
 
 /* ---------- Footer ---------- */
