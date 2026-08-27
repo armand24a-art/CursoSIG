@@ -26,6 +26,26 @@ Cada `.zip` de `materiales/` viene con un `README.txt` de marcador de posición.
 4. Sube el cambio a GitHub (ver despliegue abajo). Los botones de "Descargar .zip"
    ya apuntan a esas rutas, así que no hay que tocar el HTML.
 
+## Foto del instructor
+
+La sección "Instructor" espera una imagen en `assets/instructor.jpg`. Mientras
+ese archivo no exista, la web muestra automáticamente un ícono de silueta en su
+lugar (no se rompe el diseño).
+
+Para agregar la foto real:
+
+1. Consigue el archivo de la foto (jpg o png, idealmente cuadrada, mínimo 640×640 px).
+2. Guárdala como `assets/instructor.jpg` (si usas `.png`, cambia también el
+   `src="assets/instructor.jpg"` por `src="assets/instructor.png"` en `index.html`,
+   dentro de la sección `id="instructor"`).
+3. Sube el cambio a GitHub.
+
+> Nota: se intentó enlazar directamente una foto pública de Google Sites, pero
+> ese tipo de imágenes (`lh3.googleusercontent.com/sitesv/...`) suele tener
+> restricciones de "hotlink" y no siempre carga fuera del sitio de Google. Por
+> eso el sitio ahora espera un archivo local en `assets/`, que es la forma
+> confiable de mostrarla en GitHub Pages.
+
 ## Publicar en GitHub Pages
 
 1. Crea un repositorio en GitHub (por ejemplo `curso-sig`) y sube todo el

@@ -565,6 +565,9 @@ table.schedule.wide td:nth-child(9){ min-width: 220px; }
   background: var(--paper-2);
   border: 1px solid rgba(251,249,244,0.25);
   overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .instructor-photo img{
   width: 100%;

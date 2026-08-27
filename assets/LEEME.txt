@@ -1,0 +1,6 @@
+Coloca aquí la foto del instructor con el nombre exacto: instructor.jpg
+(formatos jpg o png; si usas png, cambia también la referencia en index.html
+de "assets/instructor.jpg" a "assets/instructor.png").
+
+Tamaño recomendado: al menos 640x640 px, idealmente cuadrada o con el
+rostro centrado — la web la recorta automáticamente en un marco cuadrado.
