@@ -39,11 +39,6 @@ body{
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 48px 48px;
-  background-position: -1px -1px;
 }
 
 /* Every image scales to its container by default, never forces page width */
@@ -567,17 +562,22 @@ table.schedule.wide td:nth-child(9){ min-width: 220px; }
 .instructor-photo{
   width: 100%;
   aspect-ratio: 1;
-  background: var(--teal);
-  border: 1px solid var(--line);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background: var(--paper-2);
+  border: 1px solid rgba(251,249,244,0.25);
+  overflow: hidden;
 }
-.instructor-photo svg{ width:64px; height:64px; color: rgba(251,249,244,0.55); }
+.instructor-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display:block;
+}
 .instructor h3{
   font-family: var(--font-display);
   font-size: 1.4rem;
   margin: 0 0 4px;
+  color: var(--white);
 }
 .instructor .role{
   font-family: var(--font-mono);
@@ -587,15 +587,22 @@ table.schedule.wide td:nth-child(9){ min-width: 220px; }
   letter-spacing:.04em;
   margin-bottom: 14px;
 }
-.instructor p{ color:#3c4a52; }
+.instructor p{ color: rgba(251,249,244,0.82); }
 .tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
 .tag{
   font-family: var(--font-mono);
   font-size: 11.5px;
-  border:1px solid var(--line);
+  border:1px solid rgba(251,249,244,0.3);
   padding: 5px 10px;
-  color: var(--teal);
+  color: rgba(251,249,244,0.85);
 }
+.link-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top: 22px;
+}
+.link-row .btn svg{ width:15px; height:15px; }
 
 /* ---------- Recursos / bibliografía ---------- */
 .res-grid{
